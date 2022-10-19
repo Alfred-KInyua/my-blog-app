@@ -1,24 +1,54 @@
-# README
+# My-App-Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+> this project is geting comfortable with MVC, Active records models and schemma
 
-Things you may want to cover:
+# ## Built with:
 
-* Ruby version
+-Ruby on Rails
+-Postgresql
 
-* System dependencies
+## Getting Started:
 
-* Configuration
+**To launch the project locally:**
 
-* Database creation
+### Step 1:
 
-* Database initialization
+-Clone this repo locally using git in the command line and the following command:
 
-* How to run the test suite
+> https://github.com/Alfred-KInyua/my-blog-app/
 
-* Services (job queues, cache servers, search engines, etc.)
+-To move into this project directory, you can run:
 
-* Deployment instructions
+> cd my-blog-app
 
-* ...
+- or alternatively you can copy and paste the commands in:
+
+> irb
+
+## Author
+
+👤 **Alfred Kinyua**
+
+- GitHub: [Alfred Kinyua](https://github.com/Alfred-KInyua)
+- Twitter: [@alfkinyua](https://twitter.com/alfkinyua)
+- LinkedIn: [@alfred-kinyua](https://www.linkedin.com/in/alfred-kinyua/)
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+## Show your support
+
+Give a ⭐️ if you like this project!
+
+## Acknowledgments
+
+- Hat tip to anyone whose code was used
+- Inspiration
+- etc
+
+## 📝 License
+
+This project is [MIT](./MIT.md) licensed.
