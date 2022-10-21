@@ -8,10 +8,6 @@ describe User, type: :model do
   it 'is valid with valid attributes' do
     expect(subject).to be_valid
   end
-  it 'should have a title' do
-    subject.name = nil
-    expect(subject).to_not be_valid
-  end
 
   it 'post counter should be an int' do
     subject.posts_counter = 10
@@ -20,6 +16,10 @@ describe User, type: :model do
 
   it 'posts counter should be greater or equal to zero' do
     subject.posts_counter = -1
+    expect(subject).to_not be_valid
+  end
+  it 'should have a name' do
+    subject.name = nil
     expect(subject).to_not be_valid
   end
 end
