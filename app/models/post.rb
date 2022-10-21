@@ -3,7 +3,7 @@ class Post < ApplicationRecord
   has_many :likes
   has_many :comments
   after_save :update_posts_counter
-
+ validate :title, presence: true
 
 
   def recent_comments
