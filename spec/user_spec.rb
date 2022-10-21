@@ -3,8 +3,11 @@ require_relative '../app/models/user'
 require_relative '../app/models/post'
 
 describe User, type: :model do
-  subject { User.new(name: 'Alfred KInyua', photo: 'https:www.facebook.com', bio: 'indiana johns') }
+  subject { User.new(id:10, name: 'Alfred KInyua', photo: 'https:www.facebook.com', bio: 'indiana johns', posts_counter: 20, created_at: 2022-10-20, updated_at:2022-10-20) }
 
+  it "is valid with valid attributes" do
+    expect(subject).to be_valid
+  end
   it 'should have a title' do
     subject.name = nil
     expect(subject).to_not be_valid

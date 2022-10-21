@@ -1,7 +1,5 @@
 
 require 'rails_helper'
-require_relative '../app/models/user'
-require_relative '../app/models/post'
 require_relative '../app/models/comment'
 
 describe Comment, type: :model do
