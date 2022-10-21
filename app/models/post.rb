@@ -3,7 +3,8 @@ class Post < ApplicationRecord
   has_many :likes
   has_many :comments
   after_save :update_posts_counter
- validate :title, presence: true
+ validate :title, presence: true, {maximum: 250}, allow_blank: false
+
 
 
   def recent_comments
