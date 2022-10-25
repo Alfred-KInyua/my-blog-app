@@ -5,7 +5,7 @@ Rails.application.routes.draw do
     resources :posts, only: [:index, :show]
     end
 
-    root to: 'users#index'
+   
   # get /users to controler to action 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
