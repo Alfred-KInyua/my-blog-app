@@ -1,8 +1,9 @@
 <div>
    <div>
-    <img src=<%= user.photo %>/>
+    <img src=<%= user.photo %> alt="Profile picture of <%= user.name%>" />
   </div>
   <div>
     <h1><%= user.name %></h1>
+       <p class="placeholder">Number of Posts: <%= user.posts_counter%> </p>
    </div>
 </div>
