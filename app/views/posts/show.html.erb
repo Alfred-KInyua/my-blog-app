@@ -1,13 +1,16 @@
-<h1> show post for a single user</h1>
-<div class="posts">
-  <div class="card-info">
+<h1> show post for a given user</h1>
+<div>
+  <div>
     <h3> <%=@post.title%> by <%= @user.name%> </h3>
     <p> <%= @post.text%> </p>
     <p class="placeholder stats placeholder-top"> Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %> </p>
   </div>
-  <div class="card-info">
+  <div>
     <% @post.comments.each do |comment| %>
-      <p> <%= comment.author.name%>: <%= comment.text%><p>
+      <p> <%= comment.user.name%>: <%= comment.text%><p>
     <% end %>  
+    <%= form_with url: "/users/#{@post.user_id}/posts/#{@post.id}/likes" do |f| %>
+  <%= f.submit "Like" %>
+  <% end %>
   </div>
 </div>

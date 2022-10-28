@@ -1,13 +1,11 @@
-<div class="user">
+<div>
 <%= render 'partials/user', user: @user %>
-<div class='bio'>
+<div>
 <p><%= @user.bio %></p>
 </div>
-<ul class='card'>
+<ul>
     <% @user.recent_posts.each do |post| %>
-      <a href="/users/<%= @user.id %>/posts/<%= post.id %> ">
         <%= render 'partials/post', post: post %>
-      </a>
     <% end %>
 </ul>
 
