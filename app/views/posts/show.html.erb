@@ -1,16 +1,17 @@
-<h1> show post for a given user</h1>
-<div>
-  <div>
-    <h3> <%=@post.title%> by <%= @user.name%> </h3>
-    <p> <%= @post.text%> </p>
-    <p class="placeholder stats placeholder-top"> Comments: <%= @post.comments_counter %>, Likes: <%= @post.likes_counter %> </p>
-  </div>
-  <div>
-    <% @post.comments.each do |comment| %>
-      <p> <%= comment.user.name%>: <%= comment.text%><p>
-    <% end %>  
-    <%= form_with url: "/users/#{@post.user_id}/posts/#{@post.id}/likes" do |f| %>
-  <%= f.submit "Like" %>
+<h1>Single post</h1>
+
+<p><%= @post.title %> by <%= @post.author.name %> Comments <%= @post.comments_counter %>, Likes <%= @post.likes_counter %></p>
+
+<p><%= @post.text %></p>
+
+<ul>
+  <% @post.comments.each do |comment| %>
+    <p><%= comment.author.name %> : <%= comment.text %></p>
   <% end %>
-  </div>
-</div>
+</ul>
+
+<%= form_with url: "/users/#{@post.author_id}/posts/#{@post.id}/likes" do |form| %>
+  <%= form.submit 'Like' %>
+<% end %>
+
+<%= link_to 'Add comment', new_user_post_comment_path(@user, @post) %>

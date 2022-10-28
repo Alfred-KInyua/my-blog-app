@@ -1,7 +1,8 @@
-<h1> List all users </h1> 
-<ul>
+<h1>All users</h1>
+
 <% @users.each do |user| %>
-   <%= render 'partials/user', user: user %>
-<%= link_to 'users', user_path(user.id)%>
+  <img src="<%= user.photo %>" alt="User photo">
+  <p><%= link_to user.name, user_path(user) %> <span>Number of posts: <%= user.posts_counter %> </span></p>
 <% end %>
-</ul>
+
+<%= link_to 'Create post', new_user_post_path(@user) %>
