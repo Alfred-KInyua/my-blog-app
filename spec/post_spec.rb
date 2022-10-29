@@ -21,7 +21,7 @@ describe Post, type: :model do
 
   it 'should accept likes_counter when author exists' do
     subject.likes_counter = 6
-    expect(subject).to_not be_valid
+    expect(subject).to be_valid
   end
 
   context 'Return invalid data' do
