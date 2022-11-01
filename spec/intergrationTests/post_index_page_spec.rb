@@ -7,7 +7,6 @@ RSpec.describe 'post', type: :system do
                           bio: 'I am a software developer', posts_counter: 0)
       @post = Post.create(title: 'About', text: 'This is a post', author: @user, comments_counter: 0, likes_counter: 0)
     end
-   
 
     it 'I can see the user\'s name' do
       visit user_posts_path(@user)
@@ -25,7 +24,7 @@ RSpec.describe 'post', type: :system do
       visit user_posts_path(@user)
       expect(page).to have_content('About')
     end
-    it 'display post text' do 
+    it 'display post text' do
       visit user_posts_path(@user)
       expect(page).to have_content('This is a post')
     end
@@ -49,5 +48,5 @@ RSpec.describe 'post', type: :system do
       click_link('About')
       expect(page).to have_current_path(user_post_path(@user, @post))
     end
-end
+  end
 end
