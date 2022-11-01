@@ -19,9 +19,9 @@ describe Post, type: :model do
 
   before { subject.save }
 
-  it 'should accept likes_counter when author exists' do
-    subject.likes_counter = 6
-    expect(subject).to be_valid
+  it 'should accept likes_counter ' do
+    subject.likes_counter = 1
+    expect(subject).to_not be_valid
   end
 
   context 'Return invalid data' do
