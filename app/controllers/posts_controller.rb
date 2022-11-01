@@ -1,7 +1,7 @@
 class PostsController < ApplicationController
   before_action :set_user, only: %i[index create show]
   def index
-    @posts = @user.posts
+    @posts = @user.posts.includes(:author)
   end
 
   def show
